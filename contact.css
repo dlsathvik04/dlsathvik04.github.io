@@ -1,0 +1,69 @@
+*{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+
+header{
+    position: sticky;
+}
+nav ul li{
+    display: inline-block;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nb{
+    background-color: black;
+    color: white;
+    width: 100vw;
+    padding: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.contact{
+    line-height: 10vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-style: groove;
+    border-color: white;
+    height: 70vh;
+    width: 80vw;
+    margin: 10vh 10vw 10vh 10vw;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* border: solid white; */
+    width: 70vw;
+    margin: 10vh 10vh;
+    font-size: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.form a{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form{
+    border-style: solid;
+    background-color: white;
+    padding: 2vh;
+    position: relative;
+    top: 15vh;
+    line-height: 0;
+    font-size: 3vh;
+}
