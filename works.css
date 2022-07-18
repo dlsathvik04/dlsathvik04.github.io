@@ -1,0 +1,35 @@
+*{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    position: sticky;
+}
+nav ul li{
+    display: inline-block;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nb{
+    background-color: black;
+    color: white;
+    width: 100vw;
+    padding: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.works{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
