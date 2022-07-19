@@ -100,3 +100,29 @@ nav ul li{
     font-family: Arial, Helvetica, sans-serif;
     
 }
+
+/* css for phone */
+
+@media screen and (max-width:1100px) {
+    .intro{
+        height: auto;
+        margin: 0 0 0 5vw;
+        display: x;
+        justify-content: center;
+        align-items: left;
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+        overflow: auto;
+        margin-top: 2vh;
+    }
+    
+    .profile{
+        padding: 5vw;
+        display: flex;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

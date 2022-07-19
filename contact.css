@@ -67,3 +67,40 @@ nav ul li{
     line-height: 0;
     font-size: 3vh;
 }
+
+@media screen and (max-width:800px) {
+    .contact{
+        line-height: 10vh;
+        display: flex;
+        justify-content: center;
+        color: white;
+        border-style: groove;
+        border-color: white;
+        height: 70vh;
+        width: 80vw;
+        margin: 10vh 10vw 10vh 10vw;
+    }
+    
+    .cont{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* border: solid white; */
+        width: 70vw;
+        margin: 10vh 10vh;
+        font-size: 3vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form{
+        border-style: solid;
+        background-color: white;
+        padding: 2vh;
+        position: relative;
+        top: 15vh;
+        line-height: 0;
+        font-size: 2vh;
+    }
+    
+}
