@@ -10,6 +10,7 @@ a{
 
 header{
     position: sticky;
+    width: max-content;
 }
 nav ul li{
     display: inline-block;
