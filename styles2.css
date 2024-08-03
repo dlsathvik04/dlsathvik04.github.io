@@ -1,0 +1,320 @@
+:root {
+    --tile-border-radius: 0.25em;
+    --tile-color: #55545436;
+    --tile-border-color: white;
+    --inner-tile-color: rgba(47, 45, 45, 0.475);
+    --title-color1: white;
+    --inner-border-color: white;
+    --bgimage: radial-gradient(
+        circle,
+        rgb(47, 38, 83) 0%,
+        rgb(18, 8, 16) 52%,
+        rgb(68, 27, 80) 100%
+    );
+    /* --bgimage: url("./assets/bg.jpg"); */
+    --tile-blur-strength: blur(30px);
+    --scorll-color: rgba(255, 255, 255, 0.821);
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 0;
+}
+h4 {
+    margin-block: 0.2em;
+}
+a {
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: var(--bgimage);
+}
+
+.parent {
+    max-width: 2048px;
+    max-height: 1128px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.5em;
+}
+
+.parent > * {
+    border-radius: var(--tile-border-radius);
+    border: 1px solid var(--tile-border-color);
+    background-color: var(--tile-color) !important;
+    backdrop-filter: var(--tile-blur-strength);
+    color: var(--title-color1);
+    padding: 2em;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 3 / 4;
+}
+.div1 .whoami {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92%;
+}
+.div1 .whoami .discr {
+    width: 60%;
+    padding-right: 2em;
+    text-align: justify;
+}
+.div1 .whoami .discr h2 {
+    text-align: left;
+}
+
+.div1 .whoami .dp {
+    max-height: 100%;
+    width: 40%;
+    overflow: hidden;
+    border: 2px solid var(--inner-border-color);
+}
+
+.div1 .whoami .dp img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.div2 {
+    grid-area: 3 / 1 / 6 / 2;
+}
+
+.div2 .skilllist {
+    max-height: 92%;
+    width: 100%;
+    overflow-x: auto;
+    font-size: large;
+}
+
+.div2 h1 {
+    margin-bottom: 0;
+}
+
+.div2 .skilllist > ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.div2 .skilllist > ul > li {
+    /* border: 2px solid var(--inner-border-color); */
+    padding: 0.3em;
+    /* margin: 0.2em; */
+    /* background-color: var(--inner-tile-color); */
+}
+
+.div3 {
+    grid-area: 3 / 2 / 5 / 4;
+    background-color: aquamarine;
+}
+
+.div4 {
+    grid-area: 5 / 2 / 6 / 4;
+    background-color: antiquewhite;
+}
+
+.div4 ul {
+    list-style: none;
+    display: flex;
+    gap: 0.25em;
+}
+
+.div4 ul li {
+    display: inline-block;
+    padding: 0.5em;
+    /* margin-block: 0.5em; */
+    background-color: var(--inner-tile-color);
+    border: 2px solid var(--inner-border-color);
+    text-decoration: none;
+}
+
+.div5 {
+    grid-area: 1 / 4 / 4 / 7;
+    background-color: beige;
+}
+
+.div5 .projectlist {
+    max-height: 95%;
+    width: 100%;
+    overflow-x: auto;
+    font-size: medium;
+}
+
+.div5 .projectlist > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.div5 .projectlist > ul > li {
+    background-color: var(--inner-tile-color);
+    border: 1px solid var(--inner-border-color);
+    padding: 0.5em;
+    margin: 0.25em;
+}
+
+.div5 .projectlist > ul > li > ul {
+    padding-left: 0;
+}
+
+.div5 .projectlist > ul > li > ul > li {
+    display: inline-block;
+    padding: 0.25em;
+    background-color: var(--tile-color);
+    border: 2px solid var(--inner-border-color);
+}
+
+.div6 {
+    grid-area: 4 / 4 / 6 / 7;
+    background-color: pink;
+}
+
+.div6 .experiencelist {
+    max-height: 95%;
+    width: 100%;
+    overflow-x: auto;
+    font-size: medium;
+}
+
+.div6 .experiencelist ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.div6 .experiencelist ul li {
+    background-color: var(--inner-tile-color);
+
+    padding-inline: 0.5em;
+    margin-block: 0.25em;
+    border: 1px solid var(--inner-border-color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0.5px;
+    border: 4px solid transparent; /* Center the 2px track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scorll-color);
+    width: 4px;
+    height: 4px;
+    margin: 1px 0; /* Center the thumb in the track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--tile-color);
+}
+
+@media (max-width: 1024px) {
+    .body {
+        box-sizing: unset;
+        height: 100dvh;
+        width: 100dvh;
+    }
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, auto);
+        padding: 1em;
+        /* overflow: hidden; */
+    }
+
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6 {
+        grid-area: auto / auto / auto / auto;
+        width: calc(100dvh-2em);
+    }
+
+    .div1 .whoami .discr,
+    .div1 .dp {
+        width: 50%;
+    }
+
+    .div1 .whoami .dp {
+        margin-top: 1em;
+    }
+
+    .div2 .skilllist,
+    .div5 .projectlist {
+        max-height: none;
+    }
+
+    .div4 ul li,
+    .div5 .projectlist > ul > li > ul > li {
+        /* display: block; */
+        padding: 0.5em;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .body {
+        box-sizing: unset;
+        height: 100vh;
+        width: 100vh;
+    }
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, auto);
+        padding: 0.25em;
+        /* overflow: hidden; */
+    }
+
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div6 {
+        grid-area: auto / auto / auto / auto;
+        width: calc(100vh-0.5em);
+    }
+
+    .div1 .whoami {
+        flex-direction: column;
+    }
+
+    .div1 .whoami .discr,
+    .div1 .whoami .dp {
+        width: 100%;
+    }
+
+    .div1 .whoami .dp {
+        margin-top: 1em;
+    }
+
+    .div2 .skilllist,
+    .div5 .projectlist {
+        max-height: none;
+    }
+
+    .div4 ul li,
+    .div5 .projectlist > ul > li > ul > li {
+        display: inline-block;
+        padding: 0.5em;
+    }
+}
